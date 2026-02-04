@@ -10,7 +10,7 @@ const Dashboard = () => {
         <div>
           <h2 className="text-4xl font-bold font-tradition text-rivaaz-dark tracking-tight">
             Welcome{" "}
-            <span className="text-rivaaz-red italic">Michael & Juliet!</span> 💍
+            <span className="text-rivaaz-red italic">Hanuman Sir & BhabiJi !</span> 💍
           </h2>
           <p className="text-slate-500 mt-2 font-medium font-modern">
             You have <span className="text-rivaaz-red font-bold">14 tasks</span>{" "}
