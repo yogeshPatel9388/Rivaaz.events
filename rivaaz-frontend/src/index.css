@@ -3,7 +3,59 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+  html {
+    /* Create the 90% zoom effect */
+    width: 111.11%; /* (100 / 0.9) to fill the screen width */
+    height: 111.11%; /* (100 / 0.9) to fill the screen height */
+    transform: scale(0.9);
+    transform-origin: 0 0;
   }
-} 
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-modern;
+    /* Ensure no horizontal scroll appears due to scaling */
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Custom Rivaaz Premium Scrollbar for the Main Content Area */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #E11D48; /* Matches rivaaz-red */
+  }
+}
+
+@layer utilities {
+  /* No-Scrollbar Utility for horizontal filters and Sidebars */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Masonry Grid Utilities for the Magazine-style Catalog */
+  .my-masonry-grid {
+    display: flex;
+    margin-left: -24px; /* Gutter width */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 24px; /* Gutter width */
+    background-clip: padding-box;
+  }
+}

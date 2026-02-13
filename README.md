@@ -108,3 +108,6 @@ src/
 ---
 
 💍 *Rivaaz — Where tradition meets modern wedding planning elegance.*
+
+
+![alt text](image.png)
